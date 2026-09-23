@@ -4,14 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SoloLotl Games — Solo Indie Studio</title>
+  
+  <!-- Підключення шрифтів Google Fonts: Fascinate, Space Grotesk та Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg-color: #0b0b0b;
-      --card-bg: #141419;
+      --card-bg: rgba(20, 20, 25, 0.8);
       --accent-color: #a45cff;
       --accent-glow: #6a00ff;
       --text-main: #f0f0f0;
       --text-muted: #a0a0b0;
+      
+      /* Шрифти */
+      --font-brand: 'Fascinate', cursive;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
     }
 
     * {
@@ -20,8 +31,16 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-family: var(--font-body);
       background-color: var(--bg-color);
+      /* Градієнт починається зверху біля логотипа і згасає до чорного в районі опису */
+      background-image: radial-gradient(
+        ellipse 80% 600px at 50% 120px, 
+        rgba(106, 0, 255, 0.25) 0%, 
+        rgba(164, 92, 255, 0.08) 50%, 
+        rgba(11, 11, 11, 0) 100%
+      );
+      background-repeat: no-repeat;
       color: var(--text-main);
       display: flex;
       flex-direction: column;
@@ -35,6 +54,7 @@
       flex-direction: column;
       align-items: center;
       margin-top: 50px;
+      position: relative;
     }
 
     .logo-container img {
@@ -42,54 +62,58 @@
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 30px rgba(106, 0, 255, 0.4);
+      box-shadow: 0 0 35px rgba(164, 92, 255, 0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .logo-container img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 45px rgba(164, 92, 255, 0.6);
+      box-shadow: 0 0 50px rgba(164, 92, 255, 0.8);
     }
 
     h1 {
-      font-size: 52px;
-      margin: 20px 0 5px;
+      font-family: var(--font-brand);
+      font-size: 58px;
+      margin: 25px 0 10px;
       background: linear-gradient(90deg, var(--accent-color), #d8b4ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .slogan {
+      font-family: var(--font-heading);
       font-size: 18px;
       color: var(--text-muted);
-      font-style: italic;
+      letter-spacing: 1px;
       margin-bottom: 30px;
     }
 
     .about {
       max-width: 680px;
       margin: 10px 20px 40px;
-      font-size: 17px;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.7;
       color: #ddd;
       background: var(--card-bg);
-      border: 1px solid rgba(164, 92, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(164, 92, 255, 0.25);
       border-radius: 16px;
       padding: 25px 30px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     }
 
     .section-title {
-      font-size: 28px;
+      font-family: var(--font-heading);
+      font-size: 26px;
       margin: 20px 0 15px;
       border-bottom: 2px solid var(--accent-color);
       padding-bottom: 8px;
+      letter-spacing: 1px;
     }
 
-    /* Секція "Will Be Soon" */
     .coming-soon-box {
       margin: 20px 0 60px;
       padding: 40px 60px;
@@ -101,8 +125,9 @@
     }
 
     .coming-soon-text {
+      font-family: var(--font-heading);
       font-size: 32px;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 2px;
       background: linear-gradient(90deg, #ffffff, var(--accent-color));
       -webkit-background-clip: text;
@@ -149,7 +174,6 @@
 
   <div class="section-title">Projects</div>
 
-  <!-- Блок-заглушка замість списку ігор -->
   <div class="coming-soon-box">
     <div class="coming-soon-text">Will Be Soon...</div>
     <div class="coming-soon-sub">Нові ігри та оновлення вже у розробці 🚀</div>
