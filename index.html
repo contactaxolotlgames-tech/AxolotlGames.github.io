@@ -84,82 +84,35 @@
 
     .section-title {
       font-size: 28px;
-      margin: 40px 0 20px;
+      margin: 20px 0 15px;
       border-bottom: 2px solid var(--accent-color);
       padding-bottom: 8px;
     }
 
-    /* Контейнер для ігор */
-    .games-container {
-      width: 100%;
-      max-width: 900px;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-bottom: 50px;
-    }
-
-    /* Картка гри */
-    .game-card {
+    /* Секція "Will Be Soon" */
+    .coming-soon-box {
+      margin: 20px 0 60px;
+      padding: 40px 60px;
       background: var(--card-bg);
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .game-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-color);
-    }
-
-    .game-card iframe {
-      width: 100%;
-      height: 167px;
-      border: none;
-    }
-
-    .game-card-content {
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      text-align: left;
-    }
-
-    .game-card-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0 0 10px;
-      color: #fff;
-    }
-
-    .game-card-desc {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.4;
-      margin-bottom: 15px;
-      flex-grow: 1;
-    }
-
-    .game-card-btn {
-      display: inline-block;
+      border: 1px dashed rgba(164, 92, 255, 0.4);
+      border-radius: 16px;
       text-align: center;
-      background: linear-gradient(90deg, var(--accent-glow), var(--accent-color));
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      transition: opacity 0.2s ease;
+      box-shadow: 0 0 25px rgba(106, 0, 255, 0.15);
     }
 
-    .game-card-btn:hover {
-      opacity: 0.9;
+    .coming-soon-text {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ffffff, var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .coming-soon-sub {
+      margin-top: 10px;
+      font-size: 15px;
+      color: var(--text-muted);
     }
 
     footer {
@@ -194,29 +147,12 @@
     Поєдную в собі програміста, 3D-художника, геймдизайнера та композитора.
   </div>
 
-  <div class="section-title">My Games & Projects</div>
+  <div class="section-title">Projects</div>
 
-  <!-- Розділ із віджетами та картками з itch.io -->
-  <div class="games-container" id="games-list">
-    
-    <!-- Інтеграція Itch.io Widget (Заміни ID гри 123456 на свій ID з itch.io) 
-    <div class="game-card">
-      <iframe src="https://itch.io/embed/123456?bg_color=141419&amp;fg_color=ffffff&amp;link_color=a45cff&amp;border_color=22222a" width="552" height="167">
-        <a href="https://yourname.itch.io/your-game">Game Title by SoloLotl</a>
-      </iframe>
-    </div>
-    
-    <!-- Резервний/Кастомний варіант картки гри 
-    <div class="game-card">
-      <div class="game-card-content">
-        <div class="game-card-title">Project Name</div>
-        <div class="game-card-desc">
-          Короткий опис вашої гри або останнього оновлення з itch.io. Тут можна вказувати жанр, платформу чи список змін.
-        </div>
-        <a href="https://itch.io" target="_blank" class="game-card-btn">Play on Itch.io</a>
-      </div>
-    </div>
--->
+  <!-- Блок-заглушка замість списку ігор -->
+  <div class="coming-soon-box">
+    <div class="coming-soon-text">Will Be Soon...</div>
+    <div class="coming-soon-sub">Нові ігри та оновлення вже у розробці 🚀</div>
   </div>
 
   <footer>
